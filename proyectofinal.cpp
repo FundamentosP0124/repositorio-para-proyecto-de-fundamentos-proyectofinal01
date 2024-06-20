@@ -160,3 +160,12 @@ void listarParticipantes() {
         cout << i + 1 << ". " << participantes[i].nombre << " - Ganadas: " << participantes[i].partidas_ganadas << ", Perdidas: " << participantes[i].partidas_perdidas << "\n";
     }
 }
+
+void guardarParticipantesEnArchivo() {
+    // Guardar la información de los participantes en un archivo
+    ofstream archivo("participantes.txt");
+    for (int i = 0; i < numero_participantes; ++i) {
+        archivo << participantes[i].nombre << " " << participantes[i].partidas_ganadas << " " << participantes[i].partidas_perdidas << "\n";
+    }
+    archivo.close();
+}
