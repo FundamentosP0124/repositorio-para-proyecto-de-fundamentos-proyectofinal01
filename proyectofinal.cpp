@@ -63,3 +63,43 @@ void mostrarMenuPrincipal() {
         }
     } while(opcion != 3); // Repetir hasta que el usuario elija salir
 }
+void mostrarMenuAdministrador() {
+    string clave;
+    cout << "Ingrese la clave de administrador: ";
+    cin >> clave;
+
+    if (clave != CLAVE_ADMIN) {
+        cout << "Clave incorrecta.\n";
+        return;
+    }
+
+    int opcion;
+    do {
+        // Mostrar las opciones del menú de administrador
+        cout << "\n--- Menu Administrador ---\n";
+        cout << "1. Listar Participantes\n";
+        cout << "2. Generar Archivos con Informacion\n";
+        cout << "3. Informacion del Grupo\n";
+        cout << "4. Regresar al Menu Principal\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        // Ejecutar la opción seleccionada por el administrador
+        switch(opcion) {
+            case 1:
+                listarParticipantes();
+                break;
+            case 2:
+                guardarParticipantesEnArchivo();
+                cout << "Archivos generados exitosamente!\n";
+                break;
+            case 3:
+                mostrarInformacionGrupo();
+                break;
+            case 4:
+                break;
+            default:
+                cout << "Opcion no valida. Intente nuevamente.\n";
+        }
+    } while(opcion != 4); // Repetir hasta que el administrador elija regresar al menú principal
+}
