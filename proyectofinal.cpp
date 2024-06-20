@@ -103,3 +103,33 @@ void mostrarMenuAdministrador() {
         }
     } while(opcion != 4); // Repetir hasta que el administrador elija regresar al menú principal
 }
+void mostrarMenuJugador() {
+    int opcion;
+    do {
+        // Mostrar las opciones del menú de jugador
+        cout << "\n--- Menu Jugador ---\n";
+        cout << "1. Inscribir Participante\n";
+        cout << "2. Empezar Juego Tic Tac Toe\n";
+        cout << "3. Instrucciones del Juego\n";
+        cout << "4. Regresar al Menu Principal\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        // Ejecutar la opción seleccionada por el jugador
+        switch(opcion) {
+            case 1:
+                inscribirParticipante();
+                break;
+            case 2:
+                iniciarJuegoTicTacToe();
+                break;
+            case 3:
+                mostrarInstruccionesJuego();
+                break;
+            case 4:
+                break;
+            default:
+                cout << "Opcion no valida. Intente nuevamente.\n";
+        }
+    } while(opcion != 4); // Repetir hasta que el jugador elija regresar al menú principal
+}
