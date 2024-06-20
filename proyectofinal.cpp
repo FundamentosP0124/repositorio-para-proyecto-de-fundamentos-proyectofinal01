@@ -133,3 +133,22 @@ void mostrarMenuJugador() {
         }
     } while(opcion != 4); // Repetir hasta que el jugador elija regresar al menú principal
 }
+
+void inscribirParticipante() {
+    if (numero_participantes >= MAX_PARTICIPANTES) {
+        // Verificar si se ha alcanzado el número máximo de participantes
+        cout << "No se pueden inscribir mas participantes.\n";
+        return;
+    }
+    
+    Participante nuevo;
+    // Solicitar el nombre del nuevo participante
+    cout << "Ingrese el nombre del participante: ";
+    cin >> nuevo.nombre;
+    nuevo.partidas_ganadas = 0;
+    nuevo.partidas_perdidas = 0;
+    // Añadir el nuevo participante al arreglo
+    participantes[numero_participantes] = nuevo;
+    numero_participantes++;
+    cout << "Participante inscrito exitosamente!\n";
+}
