@@ -200,3 +200,10 @@ void mostrarInstruccionesJuego() {
     cout << "5. El primer jugador en alinear tres de sus marcas gana.\n";
     cout << "6. Si todas las celdas están llenas y ningún jugador ha alineado tres marcas, el juego es un empate.\n";
 }
+
+void mostrarInformacionGrupo() {
+    // Mostrar la información de los miembros del grupo
+    cout << "\n--- Informacion del Grupo ---\n";
+    cout << "Yuliana Sarai Argueta Deras - 00209223\n";
+    cout << "Nombre - Carnet\n";
+}
