@@ -63,6 +63,7 @@ void mostrarMenuPrincipal() {
         }
     } while(opcion != 3); // Repetir hasta que el usuario elija salir
 }
+
 void mostrarMenuAdministrador() {
     string clave;
     cout << "Ingrese la clave de administrador: ";
@@ -103,6 +104,7 @@ void mostrarMenuAdministrador() {
         }
     } while(opcion != 4); // Repetir hasta que el administrador elija regresar al menú principal
 }
+
 void mostrarMenuJugador() {
     int opcion;
     do {
@@ -161,6 +163,34 @@ void listarParticipantes() {
     }
 }
 
+void mostrarAyuda() {
+    // Mostrar las instrucciones del juego y del menú
+    cout << "\n--- Ayuda ---\n";
+    cout << "1. Inscribir Participante: Permite agregar un nuevo jugador.\n";
+    cout << "2. Listar Participantes: Muestra la lista de jugadores inscritos.\n";
+    cout << "3. Ayuda: Muestra este mensaje de ayuda.\n";
+    cout << "4. Informacion del Grupo: Muestra los datos de los desarrolladores.\n";
+    cout << "5. Salir: Guarda los datos y sale del juego.\n";
+}
+
+void mostrarInstruccionesJuego() {
+    // Mostrar las instrucciones del juego Tic Tac Toe
+    cout << "\n--- Instrucciones del Juego Tic Tac Toe ---\n";
+    cout << "1. El juego es para dos jugadores.\n";
+    cout << "2. El tablero es una cuadrícula de 3x3.\n";
+    cout << "3. Un jugador usa 'X' y el otro usa 'O'.\n";
+    cout << "4. Los jugadores se turnan para colocar sus marcas en una celda vacía.\n";
+    cout << "5. El primer jugador en alinear tres de sus marcas horizontalmente, verticalmente o diagonalmente gana.\n";
+    cout << "6. Si todas las celdas están llenas y ningún jugador ha alineado tres marcas, el juego es un empate.\n";
+}
+
+void mostrarInformacionGrupo() {
+    // Mostrar la información de los miembros del grupo
+    cout << "\n--- Informacion del Grupo ---\n";
+    cout << "Yuliana Sarai Argueta Deras - 00209223\n";
+    cout << "Nombre - Carnet\n";
+}
+
 void guardarParticipantesEnArchivo() {
     // Guardar la información de los participantes en un archivo
     ofstream archivo("participantes.txt");
@@ -190,20 +220,15 @@ void cargarParticipantesDesdeArchivo() {
     archivo.close();
 }
 
-void mostrarInstruccionesJuego() {
-    // Mostrar las instrucciones del juego Tic Tac Toe
-    cout << "\n--- Instrucciones del Juego Tic Tac Toe ---\n";
-    cout << "1. El juego es para dos jugadores.\n";
-    cout << "2. El tablero es una cuadrícula de 3x3.\n";
-    cout << "3. Un jugador usa 'X' y el otro usa 'O'.\n";
-    cout << "4. Los jugadores se turnan para colocar sus marcas en una celda vacía.\n";
-    cout << "5. El primer jugador en alinear tres de sus marcas gana.\n";
-    cout << "6. Si todas las celdas están llenas y ningún jugador ha alineado tres marcas, el juego es un empate.\n";
+void iniciarJuegoTicTacToe() {
+    // Aquí va la lógica del juego Tic Tac Toe
+    cout << "Poner juego en esta funcion.\n";
 }
 
-void mostrarInformacionGrupo() {
-    // Mostrar la información de los miembros del grupo
-    cout << "\n--- Informacion del Grupo ---\n";
-    cout << "Yuliana Sarai Argueta Deras - 00209223\n";
-    cout << "Nombre - Carnet\n";
+int main() {
+    // Cargar participantes desde el archivo al inicio del programa
+    cargarParticipantesDesdeArchivo();
+    // Mostrar el menú principal
+    mostrarMenuPrincipal();
+    return 0;
 }
