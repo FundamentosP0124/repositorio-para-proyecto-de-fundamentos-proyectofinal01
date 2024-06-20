@@ -189,3 +189,14 @@ void cargarParticipantesDesdeArchivo() {
     }
     archivo.close();
 }
+
+void mostrarInstruccionesJuego() {
+    // Mostrar las instrucciones del juego Tic Tac Toe
+    cout << "\n--- Instrucciones del Juego Tic Tac Toe ---\n";
+    cout << "1. El juego es para dos jugadores.\n";
+    cout << "2. El tablero es una cuadrícula de 3x3.\n";
+    cout << "3. Un jugador usa 'X' y el otro usa 'O'.\n";
+    cout << "4. Los jugadores se turnan para colocar sus marcas en una celda vacía.\n";
+    cout << "5. El primer jugador en alinear tres de sus marcas gana.\n";
+    cout << "6. Si todas las celdas están llenas y ningún jugador ha alineado tres marcas, el juego es un empate.\n";
+}
