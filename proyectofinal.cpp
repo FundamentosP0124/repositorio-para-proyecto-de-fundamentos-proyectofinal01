@@ -169,3 +169,23 @@ void guardarParticipantesEnArchivo() {
     }
     archivo.close();
 }
+
+void cargarParticipantesDesdeArchivo() {
+    // Cargar la información de los participantes desde un archivo
+    ifstream archivo("participantes.txt");
+    if (!archivo.is_open()) {
+        return; // No hace nada si no existe el archivo
+    }
+    
+    numero_participantes = 0;
+    // Leer los datos del archivo y añadirlos al arreglo
+    while (archivo >> participantes[numero_participantes].nombre 
+                   >> participantes[numero_participantes].partidas_ganadas 
+                   >> participantes[numero_participantes].partidas_perdidas) {
+        numero_participantes++;
+        if (numero_participantes >= MAX_PARTICIPANTES) {
+            break;
+        }
+    }
+    archivo.close();
+}
