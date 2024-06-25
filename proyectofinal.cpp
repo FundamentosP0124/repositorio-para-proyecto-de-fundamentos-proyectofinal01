@@ -29,7 +29,6 @@ void mostrarMenuAdministrador();
 void mostrarMenuJugador();
 void inscribirParticipante();
 void listarParticipantes();
-void mostrarAyuda();
 void mostrarInstruccionesJuego();
 void mostrarInformacionGrupo();
 void guardarParticipantesEnArchivo();
@@ -161,16 +160,6 @@ void listarParticipantes() {
     for (int i = 0; i < numero_participantes; ++i) {
         cout << i + 1 << ". " << participantes[i].nombre << " - Ganadas: " << participantes[i].partidas_ganadas << ", Perdidas: " << participantes[i].partidas_perdidas << "\n";
     }
-}
-
-void mostrarAyuda() {
-    // Mostrar las instrucciones del juego y del menú
-    cout << "\n--- Ayuda ---\n";
-    cout << "1. Inscribir Participante: Permite agregar un nuevo jugador.\n";
-    cout << "2. Listar Participantes: Muestra la lista de jugadores inscritos.\n";
-    cout << "3. Ayuda: Muestra este mensaje de ayuda.\n";
-    cout << "4. Informacion del Grupo: Muestra los datos de los desarrolladores.\n";
-    cout << "5. Salir: Guarda los datos y sale del juego.\n";
 }
 
 void mostrarInstruccionesJuego() {
