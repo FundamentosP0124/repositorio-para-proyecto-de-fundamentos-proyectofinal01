@@ -20,3 +20,9 @@ void iniciarJuegoTicTacToe() {
         // Pedir al jugador que haga un movimiento
         cout << "Turno del jugador " << jugadorActual << ". Ingrese el numero de la celda: ";
         cin >> movimiento;
+
+        // Verificar si el movimiento es válido
+        if (movimiento < 1 || movimiento > 9) {
+            cout << "Movimiento invalido. Intente nuevamente.\n";
+            continue;
+        }
