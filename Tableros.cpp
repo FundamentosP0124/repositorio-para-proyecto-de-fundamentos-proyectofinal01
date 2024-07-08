@@ -14,3 +14,8 @@ void dibujarTablero(char tablero[3][3]) {
     cout << "\n";
 }
 bool verificarGanador(char tablero[3][3], char jugador) {
+ // Función para verificar si un jugador ha ganado
+    for (int i = 0; i < 3; ++i) {
+        // Verificar filas
+        if (tablero[i][0] == jugador && tablero[i][1] == jugador && tablero[i][2] == jugador)
+            return true;
