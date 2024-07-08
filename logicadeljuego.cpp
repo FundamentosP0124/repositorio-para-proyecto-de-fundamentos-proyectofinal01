@@ -48,3 +48,18 @@ void iniciarJuegoTicTacToe() {
                     actualizarPuntuaciones(nombreJugador2, nombreJugador1);
                 }
             }
+             // Verificar si el tablero está lleno
+            else if (tableroLleno(tablero)) {
+                dibujarTablero(tablero);
+                cout << "El juego es un empate!\n";
+                juegoTerminado = true;
+            } else {
+                // Cambiar de jugador
+                jugadorActual = (jugadorActual == 'X') ? 'O' : 'X';
+            }
+        } else {
+            // Si la celda no está vacía, pedir otro movimiento
+            cout << "Celda ocupada. Intente nuevamente.\n";
+        }
+    }
+}
