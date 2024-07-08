@@ -35,3 +35,16 @@ void iniciarJuegoTicTacToe() {
         if (tablero[fila][columna] != 'X' && tablero[fila][columna] != 'O') {
             // Realizar el movimiento
             tablero[fila][columna] = jugadorActual;
+
+            // Verificar si hay un ganador
+            if (verificarGanador(tablero, jugadorActual)) {
+                dibujarTablero(tablero);
+                cout << "El jugador " << jugadorActual << " ha ganado!\n";
+                juegoTerminado = true;
+                // Actualizar las puntuaciones
+                if (jugadorActual == 'X') {
+                    actualizarPuntuaciones(nombreJugador1, nombreJugador2);
+                } else {
+                    actualizarPuntuaciones(nombreJugador2, nombreJugador1);
+                }
+            }
