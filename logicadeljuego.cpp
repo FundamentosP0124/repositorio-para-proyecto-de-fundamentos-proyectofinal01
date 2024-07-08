@@ -30,3 +30,8 @@ void iniciarJuegoTicTacToe() {
         // Convertir el movimiento en coordenadas del tablero
         int fila = (movimiento - 1) / 3;
         int columna = (movimiento - 1) % 3;
+
+        // Verificar si la celda está vacía
+        if (tablero[fila][columna] != 'X' && tablero[fila][columna] != 'O') {
+            // Realizar el movimiento
+            tablero[fila][columna] = jugadorActual;
