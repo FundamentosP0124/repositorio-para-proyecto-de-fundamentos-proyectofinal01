@@ -13,3 +13,4 @@ void dibujarTablero(char tablero[3][3]) {
     }
     cout << "\n";
 }
+bool verificarGanador(char tablero[3][3], char jugador) {
