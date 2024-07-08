@@ -74,3 +74,14 @@ void iniciarJuegoTicTacToeVsPC() {
   // Solicitar el nombre del jugador
     cout << "Ingrese el nombre del Jugador (X): ";
     cin >> nombreJugador;
+
+    // Loop principal del juego
+    while (!juegoTerminado) {
+        // Dibujar el tablero
+        dibujarTablero(tablero);
+
+        if (jugadorActual == 'X') {
+            // Turno del jugador
+            cout << "Turno del jugador " << jugadorActual << ". Ingrese el numero de la celda: ";
+            cin >> movimiento;
+        }
