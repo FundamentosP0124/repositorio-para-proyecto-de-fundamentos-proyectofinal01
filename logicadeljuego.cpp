@@ -84,4 +84,11 @@ void iniciarJuegoTicTacToeVsPC() {
             // Turno del jugador
             cout << "Turno del jugador " << jugadorActual << ". Ingrese el numero de la celda: ";
             cin >> movimiento;
+        } else {
+            // Turno de la PC
+            srand(time(0));
+            do {
+                movimiento = (rand() % 9) + 1;
+            } while (tablero[(movimiento - 1) / 3][(movimiento - 1) % 3] == 'X' || tablero[(movimiento - 1) / 3][(movimiento - 1) % 3] == 'O');
+            cout << "Turno de la PC (O). Movimiento: " << movimiento << endl;
         }
