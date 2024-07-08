@@ -26,3 +26,7 @@ void iniciarJuegoTicTacToe() {
             cout << "Movimiento invalido. Intente nuevamente.\n";
             continue;
         }
+
+        // Convertir el movimiento en coordenadas del tablero
+        int fila = (movimiento - 1) / 3;
+        int columna = (movimiento - 1) % 3;
