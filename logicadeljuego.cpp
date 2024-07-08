@@ -70,3 +70,7 @@ void iniciarJuegoTicTacToeVsPC() {
     int movimiento;
     bool juegoTerminado = false;
     string nombreJugador;
+
+  // Solicitar el nombre del jugador
+    cout << "Ingrese el nombre del Jugador (X): ";
+    cin >> nombreJugador;
