@@ -5,3 +5,9 @@ void iniciarJuegoTicTacToe() {
     int movimiento;
     bool juegoTerminado = false;
     string nombreJugador1, nombreJugador2;
+
+    // Solicitar los nombres de los jugadores
+    cout << "Ingrese el nombre del Jugador 1 (X): ";
+    cin >> nombreJugador1;
+    cout << "Ingrese el nombre del Jugador 2 (O): ";
+    cin >> nombreJugador2;
