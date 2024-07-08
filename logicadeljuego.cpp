@@ -122,3 +122,21 @@ void iniciarJuegoTicTacToeVsPC() {
                     actualizarPuntuaciones("PC", nombreJugador);
                 }
             }
+            // Verificar si el tablero está lleno
+            else if (tableroLleno(tablero)) {
+                dibujarTablero(tablero);
+                cout << "El juego es un empate!\n";
+                juegoTerminado = true;
+            } else {
+                // Cambiar de jugador
+                jugadorActual = (jugadorActual == 'X') ? 'O' : 'X';
+            }
+        } else {
+            // Si la celda no está vacía, pedir otro movimiento
+            if (jugadorActual == 'X') {
+                cout << "Celda ocupada. Intente nuevamente.\n";
+            }
+        }
+    }
+}
+
