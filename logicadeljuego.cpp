@@ -11,3 +11,12 @@ void iniciarJuegoTicTacToe() {
     cin >> nombreJugador1;
     cout << "Ingrese el nombre del Jugador 2 (O): ";
     cin >> nombreJugador2;
+
+        // Loop principal del juego
+    while (!juegoTerminado) {
+        // Dibujar el tablero
+        dibujarTablero(tablero);
+
+        // Pedir al jugador que haga un movimiento
+        cout << "Turno del jugador " << jugadorActual << ". Ingrese el numero de la celda: ";
+        cin >> movimiento;
