@@ -92,3 +92,11 @@ void iniciarJuegoTicTacToeVsPC() {
             } while (tablero[(movimiento - 1) / 3][(movimiento - 1) % 3] == 'X' || tablero[(movimiento - 1) / 3][(movimiento - 1) % 3] == 'O');
             cout << "Turno de la PC (O). Movimiento: " << movimiento << endl;
         }
+
+        // Verificar si el movimiento es válido
+        if (movimiento < 1 || movimiento > 9) {
+            if (jugadorActual == 'X') {
+                cout << "Movimiento invalido. Intente nuevamente.\n";
+            }
+            continue;
+        }
