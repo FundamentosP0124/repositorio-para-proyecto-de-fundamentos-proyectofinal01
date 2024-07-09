@@ -28,3 +28,10 @@ void mostrarPuntuaciones() {
 }
 
 void guardarPuntuacionesEnArchivo() {
+     // Guardar las puntuaciones de los participantes en un archivo
+    ofstream archivo("puntuaciones.txt");
+    for (int i = 0; i < numero_participantes; ++i) {
+        archivo << participantes[i].nombre << " " << participantes[i].partidas_ganadas << " " << participantes[i].partidas_perdidas << "\n";
+    }
+    archivo.close();
+}
