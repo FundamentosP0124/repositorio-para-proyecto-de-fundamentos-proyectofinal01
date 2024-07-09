@@ -19,5 +19,5 @@ void actualizarPuntuaciones(const string& ganador, const string& perdedor) {
     guardarPuntuacionesEnArchivo();
 }
 
-
+void mostrarPuntuaciones() {
 
