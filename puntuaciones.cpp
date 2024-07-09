@@ -27,3 +27,4 @@ void mostrarPuntuaciones() {
     }
 }
 
+void guardarPuntuacionesEnArchivo() {
