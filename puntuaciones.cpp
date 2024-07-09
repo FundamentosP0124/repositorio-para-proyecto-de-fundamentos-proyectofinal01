@@ -20,4 +20,10 @@ void actualizarPuntuaciones(const string& ganador, const string& perdedor) {
 }
 
 void mostrarPuntuaciones() {
+    // Mostrar las puntuaciones de los participantes
+    cout << "\n--- Puntuaciones ---\n";
+    for (int i = 0; i < numero_participantes; ++i) {
+        cout << participantes[i].nombre << " - Ganadas: " << participantes[i].partidas_ganadas << ", Perdidas: " << participantes[i].partidas_perdidas << "\n";
+    }
+}
 
