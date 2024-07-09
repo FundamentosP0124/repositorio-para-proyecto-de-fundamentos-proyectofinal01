@@ -19,3 +19,7 @@ bool verificarGanador(char tablero[3][3], char jugador) {
         // Verificar filas
         if (tablero[i][0] == jugador && tablero[i][1] == jugador && tablero[i][2] == jugador)
             return true;
+// Verificar columnas
+        if (tablero[0][i] == jugador && tablero[1][i] == jugador && tablero[2][i] == jugador)
+            return true;
+    }
