@@ -28,3 +28,5 @@ bool verificarGanador(char tablero[3][3], char jugador) {
         return true;
     if (tablero[0][2] == jugador && tablero[1][1] == jugador && tablero[2][0] == jugador)
         return true;
+return false; // Ningún jugador ha ganado
+}
