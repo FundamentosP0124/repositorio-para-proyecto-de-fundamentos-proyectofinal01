@@ -6,3 +6,5 @@ void inicializarPuntuaciones() {
     }
     guardarPuntuacionesEnArchivo();
 }
+
+void actualizarPuntuaciones(const string& ganador, const string& perdedor) {
