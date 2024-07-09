@@ -30,3 +30,4 @@ bool verificarGanador(char tablero[3][3], char jugador) {
         return true;
 return false; // Ningún jugador ha ganado
 }
+bool tableroLleno(char tablero[3][3]) {
