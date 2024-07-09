@@ -31,3 +31,12 @@ bool verificarGanador(char tablero[3][3], char jugador) {
 return false; // Ningún jugador ha ganado
 }
 bool tableroLleno(char tablero[3][3]) {
+ // Función para verificar si el tablero está lleno
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            if (tablero[i][j] != 'X' && tablero[i][j] != 'O')
+                return false;
+        }
+    }
+    return true;
+}
