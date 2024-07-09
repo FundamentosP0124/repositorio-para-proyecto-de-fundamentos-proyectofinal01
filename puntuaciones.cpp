@@ -37,3 +37,21 @@ void guardarPuntuacionesEnArchivo() {
 }
 
 void cargarPuntuacionesDesdeArchivo() {
+    // Cargar las puntuaciones de los participantes desde un archivo
+    ifstream archivo("puntuaciones.txt");
+    if (!archivo.is_open()) {
+        return; // No hace nada si no existe el archivo
+    }
+    
+    numero_participantes = 0;
+    // Leer los datos del archivo y añadirlos al arreglo
+    while (archivo >> participantes[numero_participantes].nombre 
+                   >> participantes[numero_participantes].partidas_ganadas 
+                   >> participantes[numero >> participantes[numero_participantes].partidas_perdidas) {
+        numero_participantes++;
+        if (numero_participantes >= MAX_PARTICIPANTES) {
+            break;
+        }
+    }
+    archivo.close();
+}
