@@ -35,3 +35,5 @@ void guardarPuntuacionesEnArchivo() {
     }
     archivo.close();
 }
+
+void cargarPuntuacionesDesdeArchivo() {
