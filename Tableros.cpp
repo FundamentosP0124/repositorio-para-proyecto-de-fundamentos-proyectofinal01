@@ -23,3 +23,8 @@ bool verificarGanador(char tablero[3][3], char jugador) {
         if (tablero[0][i] == jugador && tablero[1][i] == jugador && tablero[2][i] == jugador)
             return true;
     }
+// Verificar diagonales
+    if (tablero[0][0] == jugador && tablero[1][1] == jugador && tablero[2][2] == jugador)
+        return true;
+    if (tablero[0][2] == jugador && tablero[1][1] == jugador && tablero[2][0] == jugador)
+        return true;
